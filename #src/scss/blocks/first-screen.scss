@@ -1,0 +1,220 @@
+// ПЕРВЫЙ ЭКРАН
+
+/*Основной блок*/
+
+#first-screen {
+	background-image: url('/img/bg/banner-bg-1x.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $dark-green;
+	height: 577px;
+	@include bg-x2 ('/img/bg/banner-bg-2x.jpg');
+}
+
+.banner__wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include bp-1024 {
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Текст*/
+
+.title__block {
+	flex-basis: 745px;
+	flex-grow: 2;
+	flex-shrink: 1;
+	margin-right: 90px;
+	@include bp-1024 {
+		margin-right: 0;
+		flex-basis: auto;
+	}
+	.main-title {
+		margin-bottom: 60px;
+		@include bp-1024 {
+			margin-bottom: 20px;
+		}
+		h1 {
+			color: $white;
+			margin-bottom: 15px;
+		}
+		p {
+			margin-right: 140px;
+			color: $white;
+			@include bp-1200 {
+			margin-right: 0;
+			}
+		}
+		@include bp-1024 {
+			text-align: center;
+		}
+	}
+
+	.buildings__block {
+		display: flex;
+		flex-direction: row;
+		@include bp-1024 {
+			margin-bottom: 30px;
+		}
+		@include bp-640 {
+			flex-wrap: wrap;
+		}
+		// .items-box {
+		// 	display: flex;
+		// 	flex-direction: row;
+		// 	.item {
+		// 		@include bp-1024 {
+		// 			width: 180px;
+		// 		}
+		// 	}
+		// }
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 145px;
+			min-height: 125px;
+			padding: 15px;
+			margin: 5px;
+			border-radius: 15px;
+			background-color: $second-color;
+			transition: all 0.3s ease-in-out;
+			.item__ic {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 58px;
+				height: 58px;
+				margin-bottom: 15px;
+				@include bp-768 {
+					width: 35px;
+					height: 35px;
+					margin-bottom: 5px;
+				}
+
+
+			}
+			.item__name {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+
+
+				@include bp-640 {
+					height: auto;
+				}
+				p {
+					transition: all 0.3s ease-in-out;
+					color: $main-color;
+					text-align: center;
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: lighten($second-color, 5%);
+				p {
+					color: $white;
+				}
+			}
+			@include bp-1024 {
+				justify-content: center;
+			}
+			@include bp-768 {
+				min-height: 90px;
+
+			}
+			@include bp-640 {
+
+			}
+		}
+	}
+}
+
+.form__block {
+	flex-grow: 1;
+	.modal__container {
+		width: 335px ;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 40px 30px;
+		box-shadow: 0 0px 20px rgba(53, 51, 47, 0.3);
+		.modal__title {
+			display: flex;
+			flex-direction: column;
+			@include bp-1024 {
+				flex-direction: row;
+				justify-content: center;
+			}
+			@include bp-480 {
+				flex-direction: column;
+			}
+			p {
+				margin-bottom: 0;
+				font-weight: 700;
+				@include bp-1024 {
+					margin-right: 5px;
+				}
+			}
+			span {
+				color: $main-color;
+				font-weight: 700;
+				margin-bottom: 0;
+			}
+		}
+		.modal__form {
+
+			.inputs {
+				@include bp-1024 {
+					flex-direction: row;
+				}
+				@include bp-820 {
+					flex-direction: column;
+				}
+				.form-btn {
+					@include bp-1024 {
+						margin-top:5px;
+						margin-bottom: 5px;
+					}
+					button {
+						width: 100%;
+					}
+				}
+			}
+
+		}
+
+		@include bp-1024 {
+			width: 100%;
+		}
+	}
+}
+
+
+/*-----------*/
+
+
+
+
+/*Форма*/
+
+
+
+
+/*-----------*/
+
+
+// SECTION END ==========
+
+

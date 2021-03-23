@@ -1,0 +1,45 @@
+// CHECKBOX
+
+.checkbox {
+	label {
+		cursor: pointer;
+	}
+	
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	.label-text {
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-size: 11px;
+		text-align: left;
+		line-height: 1.4;
+		color: $light-text;
+	}
+	
+	.label-text:before {
+		content: '';
+		display: inline-block;
+		left: -30px;
+		width: 18px;
+		height: 18px;
+		border-radius: 3px;
+		border: 1px solid $input-line;
+		margin-right: 10px;
+	}
+	
+	input[type="checkbox"]:checked + .label-text:before {
+		background-image: url('../img/interface/form-check.svg');
+		background-size: 10px 10px;
+		background-position-x: 4px;
+		background-position-y: 4px;
+		background-color: $main-color;
+		background-repeat: no-repeat;
+		border: none;
+	}
+}
+
+////////////////////

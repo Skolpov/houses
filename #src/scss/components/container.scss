@@ -1,0 +1,41 @@
+// Блоки
+
+.container {
+	@include min-max(320px, 100%, 0);
+}
+
+.wrap {
+	@include min-max(320px, 1200px, 15px);
+}
+
+
+.padding-block {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include bp-768 {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@include bp-480 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.first {
+	margin-left: 0;
+}
+
+.last {
+	margin-right: 0;
+}
+
+// ==========

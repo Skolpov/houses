@@ -1,0 +1,316 @@
+// ШАПКА
+
+/*Основа*/
+
+.header {
+	background: transparent;
+}
+
+.header__container {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.header__wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.header--fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 40 !important;
+	background-color: $second-color;
+}
+
+/*-----------*/
+
+
+
+
+/*Логотип*/
+
+.main-logo {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	flex-shrink: 2;
+	flex-basis: auto;
+	.logo-desctop {
+		@include bp-640 {
+			width: 120px;
+			height: auto;
+		}
+		@include bp-380 {
+			display: none;
+		}
+	}
+	.logo-mobile {
+		display: none;
+		@include bp-380 {
+			display: block;
+		}
+		@include bp-320 {
+			margin-right: 10px;
+			width: 60px;
+		}
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Меню*/
+
+.main-menu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	flex-grow: 1;
+	flex-shrink: 2;
+	@include bp-1200 {
+		display: none;
+
+	}
+	.menu-item {
+		a {
+			position: relative;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 5px 10px;
+			color: $white;
+			transition: all 0.3s ease-in-out;
+			z-index: 4;
+			&:hover {
+				&:before {
+					position: absolute;
+					content: '';
+					bottom: 5px;
+					left: 0;
+					width: 100%;
+					height: 10px;
+					background-color: $main-color;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Контакты*/
+
+.contacts {
+	display: flex; 
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: stretch;
+	flex-grow: 2;
+	flex-shrink: 5;
+	.whatsapp {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-right: 55px;
+		@include bp-768 {
+			margin-right: 15px;
+		}
+		@include bp-640 {
+			display: none;
+		}
+		.whatsapp__btn {
+			margin-bottom: 5px;
+			a {
+				position: relative;
+				display: inline-block;
+				padding: 5px 10px 5px 40px;
+				font-size: 14px;
+				text-transform: uppercase;
+				color: $white;
+				transition: all 0.3s ease-in-out;
+				border: 1px dashed #FFFFFF;
+				box-sizing: border-box;
+				border-radius: 5px;
+				&:before {
+					position: absolute;
+					top: 8px;
+					left: 10px;
+					content: '';
+					width: 15px;
+					height: 15px;
+					background-image: url('/img/social/whatsapp.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				&:hover {
+					background-color: $white;
+					color: $main-color;
+					opacity: 1;
+				}
+			}
+		}
+		p {
+			color: $white;
+			font-size: 13px;
+			@include bp-640 {
+				display: none;
+			}
+		}
+	}
+
+	.phone {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-basis: auto;
+		margin-left: 15px;
+		margin-right: 20px;
+		flex-shrink: 0;
+		.contacts__ic {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 3px;
+				right: 0;
+				bottom: 0;
+				margin: 0 auto;
+				background-image: url('../img/contacts/phone.svg');
+				background-size: 12px 18px;
+				background-repeat: no-repeat;
+				z-index: 2;
+				opacity: 1;
+			}
+			@include bp-480 {
+				display: none;
+			}
+		}
+		.phone__block {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.phone-num {
+				a {
+					font-size: 18px;
+					font-weight: 900;
+					color: $white;
+					&:hover {
+						color: darken($white, 15%);
+					}
+				}
+			}
+			.phone__link {
+				color: $main-color;
+				font-weight: 700;
+				&:hover {
+					color: lighten($main-color, 20%);
+				}
+			}
+		}
+	}
+
+}
+
+/*-----------*/
+
+
+
+
+/*Кнопка бургер-меню*/
+
+.menu-btn__block {
+	display: none;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 15px;
+	height: auto;
+	box-sizing: border-box;
+	flex-grow: 1;
+	flex-shrink: 18;
+	@include bp-1200 {
+		display: flex;
+	}
+	@include bp-680 {
+		padding: 8px;
+	}
+	
+}
+
+.menu-btn {
+	position: relative;
+	display: block;
+	top: 1px;
+	width: 25px;
+	height: 22px;
+	transform: rotate(0deg);
+	transition: .2s ease-in-out;
+	cursor: pointer;
+}
+  
+.menu-btn span {
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: $white;
+	border-radius: 10px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: 0.1s ease-in-out;
+}
+  
+.menu-btn span:nth-child(1) {
+	top: 0px;
+}
+  
+.menu-btn span:nth-child(2),.menu-btn span:nth-child(3) {
+	top: 10px;
+}
+  
+.menu-btn span:nth-child(4) {
+	top: 20px;
+}
+  
+.menu-btn.open span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+  
+.menu-btn.open span:nth-child(2) {
+	transform: rotate(45deg);
+}
+  
+.menu-btn.open span:nth-child(3) {
+	transform: rotate(-45deg);
+}
+  
+.menu-btn.open span:nth-child(4) {
+	display: none;
+}
+
+/*-----------*/
+
+
+// КОНЕЦ ШАПКИ ==========
+
+

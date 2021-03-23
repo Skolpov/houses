@@ -1,0 +1,74 @@
+// SELECT
+
+.custom-select {
+	position: relative;
+	margin: 5px 0;
+}
+  
+.custom-select select {
+	display: none; 
+}
+  
+.select-selected {
+	background-color: #fff;
+	border: 1px solid #CED4DA !important;	
+	border-radius: 5px !important;
+}
+  
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #CED4DA transparent transparent transparent;
+}
+  
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #CED4DA transparent;
+	top: 10px;
+}
+  
+.select-items div,.select-selected {
+	padding: 8px 16px;
+	border-left: 1px solid #CED4DA;
+	border-right: 1px solid #CED4DA;
+	border-radius: none;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+  
+.select-items {
+	position: absolute;
+	background-color: #fff;
+	top: 45px;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.select-items {
+	& div:first-child {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-top: 1px solid #CED4DA;
+	}
+	& div:last-child {
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom: 1px solid #CED4DA;
+	}
+}
+  
+.select-hide {
+	display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+	background-color: #004BF7;
+	color: $white;
+}
+
+// ==========
