@@ -55,6 +55,32 @@ a:hover {
 	}
 }
 
+// Единый стиль для заголовка h2
+.title__h2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+	.title_ic {
+		position: relative;
+		width: 40px;
+		height: 20px;
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			background-image: url('/img/title-ic.svg');
+			background-repeat: no-repeat;
+			width: 40px;
+			height: 20px;
+		}
+	}
+	h2 {
+		text-align: center;
+	}
+}
+
 h2 {
 	margin-bottom: 15px;
 	font-size: 32px;
@@ -105,7 +131,7 @@ h4 {
 	@include bp-768 {
 		font-size: 18px !important;
 	}
-	@include bp-320 {
+	@include bp-340 {
 		font-size: 16px !important;
 	}
 }
@@ -115,7 +141,7 @@ h4 {
 	@include bp-768 {
 		font-size: 16px !important;
 	}
-	@include bp-320 {
+	@include bp-340 {
 		font-size: 14px !important;
 	}
 }
@@ -125,7 +151,7 @@ h4 {
 	@include bp-768 {
 		font-size: 14px !important;
 	}
-	@include bp-320 {
+	@include bp-340 {
 		font-size: 13px !important;
 	}
 }
@@ -135,7 +161,7 @@ h4 {
 	@include bp-768 {
 		font-size: 13px !important;
 	}
-	@include bp-320 {
+	@include bp-340 {
 		font-size: 12px !important;
 	}
 }
@@ -145,7 +171,7 @@ h4 {
 	@include bp-768 {
 		font-size: 12px !important;
 	}
-	@include bp-320 {
+	@include bp-340 {
 		font-size: 11px !important;
 	}
 }

@@ -1,0 +1,207 @@
+// О НАС
+
+/*Основа*/
+
+
+
+
+
+/*-----------*/
+
+
+
+
+/*Заголовок*/
+
+.about__wrap {
+	.title__h2 {
+		@include bp-1024 {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Преимущества*/
+
+.about__content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include bp-1024 {
+		flex-direction: column;
+	}
+
+	.about__advantages {
+		flex-grow: 1;
+		.couple {
+			@include bp-1024 {
+				display: flex;
+				flex-direction: row;
+			}
+			@include bp-480 {
+				flex-direction: column;
+			}
+		}
+		.advantage {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin: 20px 0;
+			flex: 1;
+			@include bp-1024 {
+				align-items: flex-start;
+				margin: 15px;
+			}
+			@include bp-480 {
+				margin: 10px 0;
+			}
+			.ic {
+				position: relative;
+				min-width: 40px;
+				min-height: 30px;
+				margin-right: 20px;
+				@include bp-1024 {
+					min-width: 20px;
+					height: 15px;
+					margin-right: 10px;
+					margin-top: 10px;
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					width: 40px;
+					height: 30px;
+					background: url('/img/interface/green-check.svg');
+					background-size: 40px 30px;
+					background-repeat: no-repeat;
+					@include bp-1024 {
+						background-size: 20px 15px;
+						width: 20px;
+						height: 15px;
+					}
+				}
+
+			}
+			.text__block {
+				p {
+					font-weight: 700;
+					font-size: 20px;
+					margin-bottom: 8px;
+				}
+				span {
+					
+				}
+			}
+		}
+	}
+
+	.about__pic {
+		flex-grow: 1;
+		@include bp-1024 {
+			width: 200px;
+		}
+		@include bp-1024 {
+			width: auto;
+			img {
+				width: 200px;
+			}
+		}
+	}
+}
+
+
+
+/*----------*/
+
+
+
+
+/*Еще преимущества*/
+
+#aboutus2 {
+	background-color: $light-bg;
+}
+
+.padding-advantages {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.about__content2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	.items__block {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.couple {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-grow: 1;
+			@include bp-1024 {
+				justify-content: center;
+				align-items: flex-start;
+				flex-wrap: wrap;
+			}
+			@include bp-480 {
+				flex-direction: column;
+			}
+		}
+
+		.item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-basis: 252px;
+			flex-grow: 1;
+			margin: 10px;
+			@include bp-480 {
+				flex-direction: column;
+				flex-basis: auto;
+				text-align: center;
+
+			}
+			.ic {
+				min-width: 58px;
+				height: 58px;
+				margin-right: 15px;
+				@include bp-992 {
+					min-width: 35px;
+					height: 35px;
+				}
+				@include bp-480 {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+				img {
+					width: 58px;
+					height: 58px;
+					@include bp-992 {
+						width: 35px;
+						height: 35px;
+					}
+				}
+			}
+			p {
+				font-weight: 700;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/*----------*/
+
+
+
+// КОНЕЦ ==========

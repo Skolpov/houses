@@ -9,6 +9,10 @@
 .header__container {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	@include bp-480 {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
 }
 
 .header__wrap {
@@ -21,7 +25,15 @@
 	position: fixed;
 	width: 100%;
 	z-index: 40 !important;
-	background-color: $second-color;
+	background-color: #171B05;
+	.whatsapp {
+		.whatsapp__btn {
+			margin-bottom: 0 !important;
+		}
+		p {
+			display: none;
+		}
+	}
 }
 
 /*-----------*/
@@ -138,7 +150,7 @@
 				text-transform: uppercase;
 				color: $white;
 				transition: all 0.3s ease-in-out;
-				border: 1px dashed #FFFFFF;
+				border: 1px dashed rgba(255, 255, 255, 0.5);
 				box-sizing: border-box;
 				border-radius: 5px;
 				&:before {
@@ -220,6 +232,10 @@
 			.phone__link {
 				color: $main-color;
 				font-weight: 700;
+				cursor: pointer;
+				@include bp-480 {
+					display: none;
+				}
 				&:hover {
 					color: lighten($main-color, 20%);
 				}

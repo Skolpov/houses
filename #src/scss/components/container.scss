@@ -30,12 +30,18 @@
 	overflow: hidden !important;
 }
 
-.first {
-	margin-left: 0;
+.first_ml {
+	margin-left: 0  !important;
+}
+.last_mr {
+	margin-right: 0  !important;
 }
 
-.last {
-	margin-right: 0;
+.first_mt {
+	margin-top: 0  !important;
+}
+.last_mb {
+	margin-bottom: 0  !important;
 }
 
 // ==========

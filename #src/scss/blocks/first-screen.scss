@@ -7,7 +7,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: $dark-green;
-	height: 577px;
 	@include bg-x2 ('/img/bg/banner-bg-2x.jpg');
 }
 
@@ -68,15 +67,7 @@
 		@include bp-640 {
 			flex-wrap: wrap;
 		}
-		// .items-box {
-		// 	display: flex;
-		// 	flex-direction: row;
-		// 	.item {
-		// 		@include bp-1024 {
-		// 			width: 180px;
-		// 		}
-		// 	}
-		// }
+
 		.item {
 			display: flex;
 			flex-direction: column;
@@ -90,6 +81,15 @@
 			border-radius: 15px;
 			background-color: $second-color;
 			transition: all 0.3s ease-in-out;
+			@include bp-1024 {
+				justify-content: center;
+			}
+			@include bp-768 {
+				min-height: 90px;
+			}
+			@include bp-360 {
+				flex-basis: 38px;
+			}
 			.item__ic {
 				display: flex;
 				align-items: center;
@@ -102,15 +102,11 @@
 					height: 35px;
 					margin-bottom: 5px;
 				}
-
-
 			}
 			.item__name {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-
-
 
 				@include bp-640 {
 					height: auto;
@@ -128,16 +124,7 @@
 					color: $white;
 				}
 			}
-			@include bp-1024 {
-				justify-content: center;
-			}
-			@include bp-768 {
-				min-height: 90px;
 
-			}
-			@include bp-640 {
-
-			}
 		}
 	}
 }
