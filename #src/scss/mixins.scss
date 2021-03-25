@@ -148,6 +148,12 @@
 	}
 }
 
+@mixin bp-800 {
+	@media only screen and (max-width: 800px) {
+		@content;
+	}
+}
+
 @mixin bp-768 {
 	@media only screen and (max-width: 768px) {
 		@content;
@@ -174,6 +180,12 @@
 
 @mixin bp-440 {
 	@media only screen and (max-width: 440px) {
+		@content;
+	}
+}
+
+@mixin bp-420 {
+	@media only screen and (max-width: 420px) {
 		@content;
 	}
 }

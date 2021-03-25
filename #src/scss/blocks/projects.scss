@@ -1,0 +1,222 @@
+// ПРОЕКТЫ
+
+/*Основа*/
+
+
+
+
+/*-----------*/
+
+
+
+
+/*Меню*/
+
+.projects__wrap {
+	.title__h2 {
+		margin-bottom: 20px;
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.projects-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+	@include bp-820 {
+		display: none;
+	}
+	.menu-item {
+		a {
+			display: inline-block;
+			font-size: 16px;
+			color: $light-text;
+			padding: 10px 22px;
+			border: 1px dashed rgba(113, 111, 111, 0.5);
+			border-radius: 50px;
+			margin: 0 10px;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background-color: $main-color;
+				color: $white;
+				border-color: $main-color;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.projects-menu__input {
+	display: none;
+	margin-bottom: 20px;
+	@include bp-820 {
+		display: flex;
+		justify-content: center;
+	}
+
+	.project-select {
+		@include bp-820 {
+			width: 360px;
+		}
+		.select-items div,.select-selected {
+			padding: 14px 16px;
+
+		}
+		.select-selected:after {
+			top: 22px;
+		}
+	}
+}
+
+/*----------*/
+
+
+
+
+/*Карточки*/
+
+.projects__cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	.card {
+		display: flex;
+		flex-direction: column;
+		margin: 10px;
+		flex-basis: 360px;
+		border-radius: 15px;
+		cursor: pointer;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-in-out;
+		@include bp-480 {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&:hover {
+			box-shadow: 0 0px 20px rgba(53, 51, 47, 0.1);
+			.text {
+				p {
+					color: $main-color;
+				}
+			}
+			.card__name {
+				background-color: $white;
+			}
+		}
+		.card__pic {
+			display: flex;
+			justify-content: center;
+			position: relative;
+
+			img {
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				transition-duration: 0.7s;
+				width: 100%;
+				height: auto;
+			}
+
+			.project-info {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				margin: 5px;
+				position: absolute;
+				bottom: 0;
+
+				.info-box {
+					border: 5px solid rgba(255, 255, 255, 0.5);
+					border-radius: 20px;
+					margin: 5px;
+					@include bp-440 {
+						border: none;
+					}
+					.info-container {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						border-radius: 15px;
+						padding: 5px 15px 5px 12px;
+						background-color: rgba(255, 255, 255, 0.9);
+
+						.info-ic {
+							width: 16px;
+							height: 16px;
+							margin-right: 5px;
+							@include bp-440 {
+								display: none !important;
+							}
+						}
+						.size {
+							background: url('/img/building-info/building-size.svg') no-repeat;
+
+						}
+						.room {
+							background: url('/img/building-info/building-room.svg') no-repeat;
+						}
+						.floor {
+							background: url('/img/building-info/building-floor.svg') no-repeat;
+						}
+						.info-name {
+							display: flex;
+							flex-direction: column;
+							@include bp-420 {
+								text-align: center;
+							}
+							span {
+								font-size: 11px;
+							}
+							p {
+								font-weight: 700;
+							}
+
+						}
+					}
+				}
+			}
+		}
+
+		.card__name {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 25px 30px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			background-color: $light-bg;
+			@include bp-420 {
+				padding: 15px 20px;
+			}
+			.text {
+				margin-right: 10px;
+				span {
+					text-transform: uppercase;
+					color: $light-text;
+				}
+				p {
+					font-weight: 700;
+					margin-bottom: 0;
+				}
+			}
+			.ic-arrow {
+				min-width: 25px;
+				height: 22px;
+				background-image: url('/img/interface/arrow-tail-bold.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+
+/*----------*/
+
+
+// КОНЕЦ ==========
