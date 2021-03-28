@@ -62,6 +62,7 @@
 		display: none;
 		@include bp-380 {
 			display: block;
+			width: 60px;
 		}
 		@include bp-320 {
 			margin-right: 10px;

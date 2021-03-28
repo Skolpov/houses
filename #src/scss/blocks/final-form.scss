@@ -1,0 +1,126 @@
+// ФИНАЛЬНАЯ ФОРМА
+
+/*Основной блок*/
+
+#contacts {
+	background-image: url('/img/bg/footer-bg-1x.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*-----------*/
+
+
+
+
+/*Блок*/
+
+.final__block {
+	display: flex;
+	flex-direction: column;
+	width: 750px;
+	@include bp-1200 {
+		align-items: center;
+		width: 100%;
+	}
+}
+
+.final-title {
+	h2 {
+		color: $white;
+		font-size: 48px;
+		@include bp-1200 {
+			text-align: center;
+		}
+		@include bp-992 {
+			font-size: 28px;
+		}
+		@include bp-480 {
+			font-size: 22px;
+		}
+	}
+}
+
+.final-text {
+	margin-bottom: 30px;
+	p {
+		color: $white;
+		text-align: left;
+		@include bp-992 {
+			text-align: center;
+		}
+	}
+}
+
+/*-----------*/
+
+
+
+/*Форма*/
+
+.final-form {
+	.form__modal {
+		.modal__container {
+			padding: 25px 35px;
+			width: 750px;
+			margin: 0;
+			align-items: flex-start;
+			@include bp-1200 {
+				align-items: center;
+			}
+			@include bp-992 {
+				width: auto;
+			}
+			
+			.modal__title {
+				p {
+					text-align: left;
+					font-weight: 700;
+					@include bp-768 {
+						text-align: center;
+					}
+				}
+			}
+	
+			.modal__form {
+				align-items: flex-start;
+				@include bp-1200 {
+					align-items: center;
+				}
+				@include bp-820 {
+					width: 100%;
+				}
+				.inputs {
+					flex-direction: row;
+					@include bp-820 {
+						flex-direction: column;
+					}
+					.input__box {
+						width: 228px;
+						@include bp-820 {
+							width: auto;
+						}
+					}
+					.form-btn {
+						button {
+							padding-left: 25px;
+							padding-right: 25px;
+							height: 50px;
+						}
+					}
+				}
+				.checkbox {
+					margin: 0;
+				}
+			}
+
+		}
+
+
+	}
+}
+
+/*-----------*/
+
+
+// КОНЕЦ ПОДВАЛА ==========

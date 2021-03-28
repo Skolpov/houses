@@ -1,0 +1,109 @@
+// ОТЗЫВЫ
+
+/*Основа*/
+
+.review__wrap {
+	.title__h2 {
+		margin-bottom: 15px;
+	}
+}
+
+
+/*-----------*/
+
+
+
+
+/*Карточки*/
+
+.review__block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	// @include bp-1200 {
+	// 	flex-direction: column;
+	// }
+}
+
+.review__slider {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
+	.prev, .next {
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 0.3s ease-in-out;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.prev {
+		img {
+			transform: rotate(180deg);
+		}
+	}
+	
+}
+
+.review__item {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 540px;
+	padding: 30px 40px;
+	margin: 15px;
+	border-radius: 20px;
+	box-shadow: 0 4px 10px rgba(53, 51, 47, 0.1);
+	@include bp-1200 {
+		flex-basis: auto;
+	}
+	@include bp-480 {
+		padding: 20px 20px;
+	}
+	.text {
+		min-height: 85px;
+		margin-bottom: 20px;
+		@include bp-1200 {
+			min-height: 100%;
+		}
+		p {
+			font-style: italic;
+		}
+	}
+	.reviewer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.avatar {
+			min-width: 50px;
+			height: 50px;
+			margin-right: 15px;
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+			}
+		}
+		.name {
+			font-weight: 700;
+
+		}
+	}
+}
+
+
+
+/*----------*/
+
+
+
+
+/*Блок*/
+
+
+
+
+/*----------*/
+
+// КОНЕЦ ==========

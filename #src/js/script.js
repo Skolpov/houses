@@ -12,9 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
 @@include('custom-select.js')
 @@include('btn-up.js')
 @@include('anchors.js')
+@@include('siema.min.js')
 @@include('slider.js')
-@@include('moreServices.js')
-@@include('yamaps.js')
+// @@include('moreServices.js')
+// @@include('yamaps.js')
+
+
 
 
 
