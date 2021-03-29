@@ -110,11 +110,13 @@
 		flex-grow: 1;
 		@include bp-1024 {
 			width: 200px;
+			height: auto;
 		}
 		@include bp-1024 {
 			width: auto;
 			img {
 				width: 200px;
+				height: auto;
 			}
 		}
 	}

@@ -6,6 +6,7 @@
 	background-image: url('/img/bg/footer-bg-1x.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	@include bg-x2 ('/img/bg/footer-bg-2x.jpg');
 }
 
 /*-----------*/

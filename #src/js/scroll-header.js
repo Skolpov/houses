@@ -13,7 +13,7 @@ function myFunction() {
 	if (window.pageYOffset > sticky) {
 		header.classList.add("header--fixed");
 		header.classList.add('animate__animated', 'animate__fadeIn');
-		content.style.paddingTop="75px";
+		content.style.paddingTop="77px";
 	} else {
 		header.classList.remove("header--fixed");
 		content.style.paddingTop="";

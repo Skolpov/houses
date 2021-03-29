@@ -6,6 +6,7 @@
 .proj-skill {
 	background: url('/img/bg/projects-bg-1x.jpg') no-repeat;
 	background-size: cover;
+	@include bg-x2 ('/img/bg/projects-bg-2x.jpg');
 }
 
 
@@ -32,20 +33,33 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+	
 	@include bp-820 {
-		display: none;
+		flex-wrap: wrap;
 	}
-	.menu-item {
+	.tab-item {
+		margin: 0 10px;
+
+		@include bp-820 {
+			margin: 10px;
+		}
+		@include bp-480 {
+			margin: 5px;
+		}
 		a {
-			display: inline-block;
+			display: block;
 			font-size: 16px;
 			color: $light-text;
 			padding: 10px 22px;
 			border: 1px dashed rgba(113, 111, 111, 0.5);
 			border-radius: 50px;
-			margin: 0 10px;
+			white-space: nowrap;
 			transition: all 0.3s ease-in-out;
+			@include bp-480 {
+				padding: 8px 16px;
+				font-size: 14px;
+			}
 			&:hover {
 				background-color: $main-color;
 				color: $white;
@@ -54,29 +68,13 @@
 			}
 		}
 	}
-}
-
-.projects-menu__input {
-	display: none;
-	margin-bottom: 20px;
-	@include bp-820 {
-		display: flex;
-		justify-content: center;
-	}
-
-	.project-select {
-		@include bp-820 {
-			width: 360px;
-		}
-		.select-items div,.select-selected {
-			padding: 14px 16px;
-
-		}
-		.select-selected:after {
-			top: 22px;
-		}
+	.active {
+		background-color: $main-color;
+		color: $white !important;
+		border-color: transparent !important;
 	}
 }
+
 
 /*----------*/
 
@@ -90,6 +88,12 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	@include bp-820 {
+		flex-direction: column;
+	}
+	@include bp-640 {
+		flex-direction: row;
+	}
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -99,24 +103,25 @@
 		cursor: pointer;
 		transition-duration: 0.3s;
 		transition-timing-function: ease-in-out;
-		@include bp-992 {
-			flex-basis: 280px;
+		background-color: #F9F9F9;
+
+		@include bp-820 {
+			flex-direction: row;
+			flex-basis: auto;
 		}
-		@include bp-480 {
-			flex-basis: 100%;
-			margin: 5px 0 5px 0;
+		@include bp-640 {
+			flex-direction: column;
 		}
 
 		&:hover {
 			box-shadow: 0 0px 20px rgba(53, 51, 47, 0.1);
+			background-color: $white;
 			.text {
 				p {
 					color: $main-color;
 				}
 			}
-			.card__name {
-				background-color: $white;
-			}
+
 		}
 		.card__pic {
 			display: flex;
@@ -129,6 +134,10 @@
 				transition-duration: 0.7s;
 				width: 100%;
 				height: auto;
+				@include bp-820 {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+				}
 			}
 
 			.project-info {
@@ -143,9 +152,10 @@
 					border: 5px solid rgba(255, 255, 255, 0.5);
 					border-radius: 20px;
 					margin: 5px;
-					@include bp-992 {
+					@include bp-820 {
 						border: none;
 					}
+
 					.info-container {
 						display: flex;
 						flex-direction: row;
@@ -158,12 +168,10 @@
 							width: 16px;
 							height: 16px;
 							margin-right: 5px;
-							@include bp-992 {
+							@include bp-820 {
 								display: none;
 							}
-							@include bp-480 {
-								display: block;
-							}
+
 							@include bp-380 {
 								display: none;
 							}
@@ -203,14 +211,20 @@
 			flex-direction: row;
 			align-items: center;
 			padding: 25px 30px;
-			border-bottom-left-radius: 15px;
-			border-bottom-right-radius: 15px;
-			background-color: $light-bg;
+			justify-content: space-between;
+			@include bp-820 {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-right: 0;
+			}
 			@include bp-380 {
 				padding: 15px 20px;
 			}
 			.text {
 				margin-right: 10px;
+				@include bp-820 {
+					margin-right: 0;
+				}
 				span {
 					text-transform: uppercase;
 					color: $light-text;
@@ -227,9 +241,8 @@
 				background-image: url('/img/interface/arrow-tail-bold.svg');
 				background-repeat: no-repeat;
 				background-size: contain;
-				@include bp-380 {
-					min-width: 15px;
-					height: 12px;
+				@include bp-640 {
+					display: none;
 				}
 			}
 		}

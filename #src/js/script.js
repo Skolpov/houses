@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 @@include('anchors.js')
 @@include('siema.min.js')
 @@include('slider.js')
+@@include('filtr-project.js')
 // @@include('openreview.js')
 // @@include('moreServices.js')
 // @@include('yamaps.js')
@@ -23,5 +24,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 modals();
-
+filter();
 });
