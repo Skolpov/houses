@@ -78,10 +78,13 @@
 			margin-bottom: 30px;
 		}
 		@include bp-640 {
-			flex-wrap: wrap;
+			border-radius: 15px;
+			background-color: $second-color;
+
 		}
 
 		.item {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -100,9 +103,19 @@
 			@include bp-768 {
 				min-height: 90px;
 			}
-			@include bp-360 {
-				flex-basis: 38px;
+			@include bp-640 {
+				padding: 5px;
+				margin: 0;
+				border-radius: 0;
+				border: none;
+				flex-basis: 100%;
+				background: none;
 			}
+			@include bp-340 {
+				padding: 2px;
+				min-height: 70px;
+			}
+
 			.item__ic {
 				display: flex;
 				align-items: center;
@@ -119,6 +132,14 @@
 						height: 35px;
 					}
 				}
+				@include bp-340 {
+					width: 25px;
+					height: 25px;
+					img {
+						width: 25px;
+						height: 25px;
+					}
+				}
 			}
 			.item__name {
 				display: flex;
@@ -132,15 +153,18 @@
 					transition: all 0.3s ease-in-out;
 					color: $main-color;
 					text-align: center;
+					@include bp-420 {
+						font-size: 13px;
+					}
 				}
 			}
-			&:hover {
-				cursor: pointer;
-				background-color: lighten($second-color, 5%);
-				p {
-					color: $white;
-				}
-			}
+			// &:hover {
+			// 	cursor: pointer;
+			// 	background-color: lighten($second-color, 5%);
+			// 	p {
+			// 		color: $white;
+			// 	}
+			// }
 
 		}
 	}
@@ -201,6 +225,9 @@
 
 		@include bp-1024 {
 			width: 100%;
+		}
+		@include bp-480 {
+			padding: 25px 20px;
 		}
 	}
 }

@@ -25,4 +25,38 @@ $(document).ready(function () {
 });
 
 
+
 // ==========
+
+
+
+// const anchors = () => {
+// 	function anchorsMove(trigger, target) {
+
+// 		const target = document.querySelector(target);
+// 		const trigger = document.querySelector(trigger);
+
+// 		trigger.forEach(function(item) {
+// 			item.addEventListener('click', openModal)
+// 		});
+
+// 		target.addEventListener('click', (e) => {
+// 			if (e.target === modal) {
+// 			}
+// 		});
+
+// 		function openModal() {
+// 				modal.classList.add('modal--show');
+// 				document.body.style.overflow = 'hidden';
+// 				modal.classList.add('animate__animated', 'animate__fadeIn');
+// 		}
+
+
+
+// 	}
+
+// 	anchorsMove('.phone__link', '.application__form', '.modal__close');
+
+
+
+// };

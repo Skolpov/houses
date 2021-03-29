@@ -15,8 +15,8 @@
 	.title__h2 {
 		margin-bottom: 0;
 		@include bp-540 {
-			margin-bottom: 20px;
 		}
+
 	}
 }
 
@@ -43,9 +43,15 @@
 		margin-bottom: 40px;
 		flex-wrap: nowrap;
 	}
-	@include bp-540 {
-		display: none;
+	@include bp-768 {
+		margin-bottom: 20px;
 	}
+	@include bp-640 {
+		border: 1px solid #B5BE92;
+	}
+	// @include bp-540 {
+	// 	display: none;
+	// }
 	.item {
 		display: flex;
 		flex-direction: column;
@@ -57,17 +63,25 @@
 		border: 1px dotted #B5BE92;
 		border-radius: 15px;
 		transition: all 0.3s ease-in-out;
-		@include bp-1200 {
-		}
+
 		@include bp-1024 {
 			justify-content: center;
 		}
 		@include bp-768 {
 			min-height: 90px;
 		}
-		@include bp-360 {
-			flex-basis: 38px;
+		@include bp-640 {
+			padding: 5px;
+			margin: 0;
+			border-radius: 0;
+			border: none;
+			flex-basis: 100%;
 		}
+		@include bp-340 {
+			padding: 2px;
+			min-height: 70px;
+		}
+
 		.item__ic {
 			display: flex;
 			align-items: center;
@@ -82,6 +96,14 @@
 				img {
 					width: 35px;
 					height: 35px;
+				}
+			}
+			@include bp-340 {
+				width: 25px;
+				height: 25px;
+				img {
+					width: 25px;
+					height: 25px;
 				}
 			}
 		}
@@ -101,12 +123,14 @@
 				@include bp-640 {
 					border-bottom: none;
 				}
+				@include bp-420 {
+					font-size: 13px;
+				}
 			}
 		}
 		&:hover {
 			cursor: pointer;
-			background-color: lighten($second-color, 25%);
-			border: 1px solid transparent;
+			background-color: $main-color;
 			p {
 				color: $white;
 				border-bottom: none;
@@ -115,15 +139,15 @@
 	}
 	.steps__item--big {
 		width: 175px;
-		@include bp-768 {
-			width: 112px;
+		@include bp-1200 {
+		width: auto;
 		}
+
 	}
 	.active {
-		background-color: lighten($second-color, 65%);
-		border: 1px solid lighten($second-color, 65%);
+		background-color: $main-color;
 		p {
-			color: $main-color !important;
+			color: $white !important;
 			border-bottom: none;
 			border: 1px solid transparent !important;
 		}
@@ -161,7 +185,7 @@
 			flex-direction: column;
 		}
 		@include bp-480 {
-			padding: 20px 20px;
+			padding: 25px 20px;
 		}
 		.content {
 			display: flex;
@@ -172,7 +196,7 @@
 			@include bp-768 {
 				flex-basis: auto;
 				margin-right: 0;
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 			}
 			.title {
 				h3 {
@@ -181,6 +205,9 @@
 			}
 			.text {
 				margin-bottom: 30px;
+				@include bp-768 {
+					margin-bottom: 20px;
+				}
 				p {
 					margin-bottom: 0;
 				}
@@ -189,7 +216,7 @@
 			.advantages {
 				display: flex;
 				flex-direction: row;
-				@include bp-480 {
+				@include bp-768 {
 					justify-content: space-between;
 				}
 				.item {
@@ -200,13 +227,22 @@
 					margin: 5px 15px;
 					@include bp-480 {
 						margin: 5px;
-					}
+				}
 					.ic {
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						max-width: 25px;
 						max-height: 25px;
+						@include bp-480 {
+							max-width: 20px;
+							max-height: 20px;
+							margin-bottom: 5px;
+							img {
+								width: 20px;
+								height: 20px;
+							}
+						}
 					}
 					p {
 						margin-bottom: 0;

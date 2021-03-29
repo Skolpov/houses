@@ -71,6 +71,9 @@
 			@include bp-992 {
 				width: auto;
 			}
+			@include bp-480 {
+				padding: 25px 20px;
+			}
 			
 			.modal__title {
 				p {

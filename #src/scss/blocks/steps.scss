@@ -111,6 +111,9 @@
 				width: 25px;
 				height: 25px;
 				margin-bottom: 5px;
+				@include bp-480 {
+					display: none;
+				}
 				span {
 					display: inline-block;
 					border: 1px solid #B2B2B2;

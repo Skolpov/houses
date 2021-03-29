@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 @@include('anchors.js')
 @@include('siema.min.js')
 @@include('slider.js')
+// @@include('openreview.js')
 // @@include('moreServices.js')
 // @@include('yamaps.js')
 
