@@ -11,23 +11,24 @@
 					</a>
 				</div>
 				<div class="main-menu">
+
 					<div class="menu-item">
-						<a href="#aboutus">О нас</a>
+						<span class="aboutus-anchor">О нас</span>
 					</div>
 					<div class="menu-item">
-						<a href="#projects">Проекты</a>
+						<span class="projects-anchor">Проекты</span>
 					</div>
 					<div class="menu-item">
-						<a href="#skill">Что можем</a>
+						<span class="skill-anchor">Что можем</span>
 					</div>
 					<div class="menu-item">
-						<a href="#review">Отзывы</a>
+						<span class="review-anchor">Отзывы</span>
 					</div>
 					<div class="menu-item">
-						<a href="#steps">4 шага</a>
+						<span class="steps-anchor">4 шага</span>
 					</div>
 					<div class="menu-item">
-						<a href="#contacts">Контакты</a>
+						<span class="final-anchor">Контакты</span>
 					</div>
 				</div>
 				<div class="contacts">
@@ -61,13 +62,13 @@
 									<p>Закрыть меню</p>
 								</div>
 								<nav class="burger-menu__items">
-									<a href="#first-screen">Главная</a>
-									<a href="#aboutus">О нас</a>
-									<a href="#projects">Проекты</a>
-									<a href="#skill">Что можем</a>
-									<a href="#review">Отзывы</a>
-									<a href="#steps">4 шага</a>
-									<a href="#contacts">Контакты</a>
+									<span class="main-anchor">Главная</span>
+									<span class="aboutus-anchor">О нас</span>
+									<span class="projects-anchor">Проекты</span>
+									<span class="skill-anchor">Что можем</span>
+									<span class="review-anchor">Отзывы</span>
+									<span class="steps-anchor">4 шага</span>
+									<span class="final-anchor">Контакты</span>
 								</nav>
 							</div>
 							<div class="burger__item">
@@ -102,7 +103,7 @@
 	<div class="container banner__container">
 		<div class="wrap banner__wrap first-screen-padding">
 			<div class="title__block">
-				<div class="main-title">
+				<div class="main-title _anim-items">
 					<h1 >Строительство домов, саун
 						и малых форм из дерева
 					</h1>
@@ -111,8 +112,8 @@
 						с собой и с природой.
 					</p>
 				</div>
-				<div class="buildings__block">
-					<div class="item">
+				<div class="buildings__block _anim-items">
+					<div class="item ">
 						<div class="item__ic">
 							<img 
 							src="./img/type-of-buildings/ic-build1.svg" 
@@ -154,7 +155,7 @@
 						</div>
 						<div class="item__name"><p>Перголы</p></div>
 					</div> 
-					<div class="item">
+					<div class="item ">
 						<div class="item__ic">
 							<img 
 							src="./img/type-of-buildings/ic-build5.svg" 
@@ -166,7 +167,7 @@
 					</div> 
 				</div>
 			</div>
-			<div class="form__block">
+			<div class="form__block _anim-items">
 				<div class="form__modal">
 					<div class="modal__container">
 			
@@ -175,29 +176,33 @@
 							<span class="p18">вас проконсультируем?</span>
 						</div>
 				
-						<div class="modal__form">
+						<form class="modal__form main-form2 ">
 							<div class="inputs">
-								<div class="input__box input-name">
-									<input type="text" placeholder="ИМЯ">
+								<div class="input-container">
+									<div class="input-box input-name">
+										<input type="text" placeholder="ИМЯ" class="inp-name2">
+										<small></small>
+									</div>
 								</div>
-								<div class="input__box input-phone">
-									<input type="tel" placeholder="ТЕЛЕФОН">
-								</div>
+								<div class="input-container">
+									<div class="input-box input-phone">
+										<input type="tel" placeholder="ТЕЛЕФОН" class="inp-phone2">
+										<small></small>
+									</div>
+								</div>	
 								<div class="form-btn">
 									<button>Отправить заявку</button>
 								</div>
 							</div>
 							<div class="checkbox">
-								<label>
-									<input type="checkbox" checked>
-									<!-- <div class="label-text"> -->
-										<span class="label-text">
-											Согласен на обработку персональных данных
-										</span>	
-									<!-- </div> -->
-								</label>
+								<input type="checkbox" id="form-check1" checked>
+								<label for="form-check1" class="label-text">
+									Вы соглашаетесь на 
+								</label>	
+								<span class="btn-politics">условия обработки
+									персональных данных</span>
 							</div>
-						</div>
+						</form>
 			
 					</div>
 				</div>

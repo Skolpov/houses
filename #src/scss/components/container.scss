@@ -1,11 +1,11 @@
 // Блоки
 
 .container {
-	@include min-max(320px, 100%, 0);
+	@include min-max(280px, 100%, 0);
 }
 
 .wrap {
-	@include min-max(320px, 1200px, 15px);
+	@include min-max(280px, 1200px, 15px);
 }
 
 
@@ -24,6 +24,10 @@
 
 .hidden {
 	display: none !important;
+}
+
+.show-block {
+	display: flex !important;
 }
 
 .overflow-hidden {

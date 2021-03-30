@@ -57,7 +57,7 @@
 }
  
 .burger-menu__items {
-	a {
+	span {
 		display: block;
 		padding-left: 55px;
 		padding-right: 55px;
@@ -70,6 +70,7 @@
 		border: none;
 		transition: all .3s ease-in-out;
 		color: $text;
+		cursor: pointer;
 		@include bp-768 {
 			text-align: center;
 		}

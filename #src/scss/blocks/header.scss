@@ -18,7 +18,7 @@
 .header__wrap {
 	display: flex;
 	flex-direction: row;
-	align-items: stretch;
+	align-items: center;
 }
 
 .header--fixed {
@@ -46,9 +46,16 @@
 .main-logo {
 	display: flex;
 	align-items: center;
-	flex-grow: 1;
-	flex-shrink: 2;
-	flex-basis: auto;
+	flex: 1 1 200px;
+	max-height: 55px;
+	margin-right: 20px;
+	@include bp-480 {
+		flex-basis: auto;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 	.logo-desctop {
 		@include bp-640 {
 			width: 120px;
@@ -62,11 +69,8 @@
 		display: none;
 		@include bp-380 {
 			display: block;
-			width: 60px;
-		}
-		@include bp-320 {
-			margin-right: 10px;
-			width: 60px;
+			width: 50px;
+			margin-right: 15px;
 		}
 	}
 }
@@ -83,14 +87,13 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
-	flex-grow: 1;
-	flex-shrink: 2;
+	flex: 1 0 auto;
 	@include bp-1200 {
 		display: none;
 
 	}
 	.menu-item {
-		a {
+		span {
 			position: relative;
 			display: inline-block;
 			font-size: 14px;
@@ -100,6 +103,7 @@
 			color: $white;
 			transition: all 0.3s ease-in-out;
 			z-index: 4;
+			cursor: pointer;
 			&:hover {
 				&:before {
 					position: absolute;
@@ -128,8 +132,10 @@
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: stretch;
-	flex-grow: 2;
-	flex-shrink: 5;
+	flex: 2 2 408px;
+	@include bp-480 {
+		flex-basis: auto;
+	}
 	.whatsapp {
 		display: flex;
 		flex-direction: column;
@@ -161,7 +167,7 @@
 					content: '';
 					width: 15px;
 					height: 15px;
-					background-image: url('/img/social/whatsapp.svg');
+					background-image: url('../img/social/whatsapp.svg');
 					background-size: contain;
 					background-repeat: no-repeat;
 				}
@@ -189,6 +195,10 @@
 		margin-left: 15px;
 		margin-right: 20px;
 		flex-shrink: 0;
+		@include bp-480 {
+			margin-left: 0;
+			margin-right: 10px;
+		}
 		.contacts__ic {
 			position: relative;
 			display: flex;
@@ -225,6 +235,9 @@
 					font-size: 18px;
 					font-weight: 900;
 					color: $white;
+					@include bp-340 {
+						font-size: 16px;
+					}
 					&:hover {
 						color: darken($white, 15%);
 					}
@@ -260,14 +273,13 @@
 	padding: 15px;
 	height: auto;
 	box-sizing: border-box;
-	flex-grow: 1;
-	flex-shrink: 18;
 	@include bp-1200 {
 		display: flex;
 	}
 	@include bp-680 {
-		padding: 8px;
+		padding: 8px 0 8px 8px;
 	}
+
 	
 }
 

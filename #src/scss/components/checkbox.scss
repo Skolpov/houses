@@ -10,25 +10,26 @@
 	}
 
 	.label-text {
-		margin-top: 15px;
+		position: relative;
 		display: flex;
 		align-items: center;
-		position: relative;
+		padding-left: 30px;
 		font-size: 11px;
 		text-align: left;
-		line-height: 1.4;
 		color: $light-text;
 	}
 	
 	.label-text:before {
+		position: absolute;
 		content: '';
 		display: inline-block;
-		left: -30px;
+		left: 0;
+		top: 8px;
 		width: 18px;
 		height: 18px;
 		border-radius: 3px;
+		background-color: $line;
 		border: 1px solid $input-line;
-		background-color: #F9F9F9;
 		margin-right: 10px;
 	}
 	

@@ -16,6 +16,13 @@
 		position: relative;
 		min-height: 41px;
 		.title__h2 {
+			transform: translate(0, 30%);
+			opacity: 0;
+			&._active {
+				opacity: 1;
+				transform: translate(0px, 0px);
+				transition: all 0.6s ease 0s;
+			}
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -51,29 +58,32 @@
 	align-items: center;
 	border: 5px solid #EFEFEF;
 	border-radius: 20px;
-	@include bp-580 {
-		border: none;
-	}
+	// @include bp-580 {
+	// 	border: none;
+	// }
 	.steps {
 		padding: 40px 25px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		width: 100%;
+		@include bp-1200 {
+			align-items: flex-start;
+		}
 		@include bp-992 {
 			flex-direction: column;
+			align-items: center;
 		}
-		@include bp-580 {
-			padding: 0;
-			align-items: flex-start;
+		@include bp-480 {
+			padding: 15px 25px;
 		}
 	}
 	.couple {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		@include bp-580 {
+		@include bp-480 {
 			flex-direction: column;
 			width: 100%;
 		}
@@ -84,17 +94,30 @@
 		align-items: center;
 		margin: 15px;
 		flex-basis: 240px;
-		@include bp-580 {
+		transform: translate(0, 30%);
+		opacity: 0;
+		&._active {
+			opacity: 1;
+			transform: translate(0px, 0px);
+			transition: all 0.6s ease 0s;
+		}
+		@include bp-1200 {
+			flex-direction: column;
 			flex-basis: auto;
+			justify-content: center;
 		}
 		@include bp-480 {
-			margin: 10px 0;
+			flex-direction: row;
+			margin: 10px;
 		}
+
 		.step-ic {
 			min-width: 65px;
 			min-height: 65px;
 			margin-right: 15px;
-			@include bp-480 {
+			@include bp-1200 {
+				margin-right: 0;
+				margin-bottom: 10px;
 				min-width: 35px;
 				min-height: 35px;
 				img {
@@ -102,11 +125,22 @@
 					height: 35px;
 				}
 			}
+			@include bp-480 {
+				margin-bottom: 0;
+				margin-right: 10px;
+			}
 		}
 		.step-text {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			@include bp-1200 {
+				align-items: center;
+				text-align: center;
+			}
+			@include bp-480 {
+				text-align: left;
+			}
 			.number {
 				width: 25px;
 				height: 25px;
@@ -127,8 +161,9 @@
 				}
 			}
 			.text {
-				width: auto;
+				width: 160px;
 				p {
+					width: 100%;
 					font-weight: 700;
 				}
 			}

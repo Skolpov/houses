@@ -5,7 +5,7 @@ var body = document.querySelector('body');
 var overlay = document.querySelector('.overlay');
 var navIcon = document.querySelector('.menu-btn');
 var burgerNav = document.querySelector('.burger-menu__block');
-var burgerItems = Array.prototype.slice.call(document.querySelectorAll('.burger-menu__items a'));
+var burgerItems = Array.prototype.slice.call(document.querySelectorAll('.burger-menu__items span'));
 var closeBurger = document.querySelector('.close-burger');
 
 

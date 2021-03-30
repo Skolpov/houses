@@ -160,6 +160,12 @@
 	}
 }
 
+@mixin bp-720 {
+	@media only screen and (max-width: 720px) {
+		@content;
+	}
+}
+
 @mixin bp-680 {
 	@media only screen and (max-width: 680px) {
 		@content;

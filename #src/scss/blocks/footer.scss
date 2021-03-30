@@ -49,6 +49,12 @@ footer {
 			order: 2;
 		}
 		.logo-desctop {
+			width: 140px;
+			height: 20px;
+			img {
+				width: 100%;
+				height: auto;
+			}
 			@include bp-640 {
 				width: 100px;
 				height: auto;
@@ -158,8 +164,12 @@ footer {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		flex-basis: 160px;
+		flex: 1 0 auto;
+		max-width: 160px;
 		margin-right: 20px;
+		.address__block {
+			flex-shrink: 1;
+		}
 		@include bp-768 {
 			flex-basis: auto;
 			margin-right: 0;

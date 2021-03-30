@@ -25,7 +25,7 @@ const filter = () => {
 
 		if (markType) {
 			markType.forEach(mark => {
-				mark.style.display = 'flex';
+				mark.style.display = 'block';
 				mark.classList.add('animate__animated', 'animate__fadeIn');
 			})
 		}

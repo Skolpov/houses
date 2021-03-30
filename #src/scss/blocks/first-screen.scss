@@ -3,11 +3,14 @@
 /*Основной блок*/
 
 #first-screen {
-	background-image: url('/img/bg/banner-bg-1x.jpg');
+	background-image: url('../img/bg/banner-bg-1x.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: $dark-green;
-	@include bg-x2 ('/img/bg/banner-bg-2x.jpg');
+	@include bg-x2 ('../img/bg/banner-bg-2x.jpg');
+	@include bp-1024 {
+		background-position-x: -1200px;
+	}
 }
 
 .first-screen-padding {
@@ -42,16 +45,24 @@
 /*Текст*/
 
 .title__block {
-	flex-basis: 745px;
-	flex-grow: 2;
-	flex-shrink: 1;
+	flex: 2 1 745px;
+	max-width:745px;
 	margin-right: 90px;
 	@include bp-1024 {
 		margin-right: 0;
 		flex-basis: auto;
+		max-width: 100%;
 	}
 	.main-title {
 		margin-bottom: 60px;
+		transform: translate(0, 20%);
+		transition: all 0.8s ease 0s;
+		opacity: 0;
+		&._active {
+			opacity: 1;
+			transform: translate(0px, 0px);
+			transition: all 0.8s ease 0s;
+		}
 		@include bp-1024 {
 			margin-bottom: 20px;
 		}
@@ -69,18 +80,25 @@
 		@include bp-1024 {
 			text-align: center;
 		}
+
 	}
 
 	.buildings__block {
 		display: flex;
 		flex-direction: row;
+		transition: all 0.3s ease-in-out;
+		opacity: 0;
+		&._active {
+			opacity: 1;
+			transition: all 0.3s ease 0s;
+		}
+
 		@include bp-1024 {
 			margin-bottom: 30px;
 		}
 		@include bp-640 {
 			border-radius: 15px;
 			background-color: $second-color;
-
 		}
 
 		.item {
@@ -96,7 +114,7 @@
 			margin: 5px;
 			border-radius: 15px;
 			background-color: $second-color;
-			transition: all 0.3s ease-in-out;
+
 			@include bp-1024 {
 				justify-content: center;
 			}
@@ -169,67 +187,124 @@
 		}
 	}
 }
-
-.form__block {
-	flex-grow: 1;
-	.modal__container {
-		width: 335px ;
-		margin-left: 0;
-		margin-right: 0;
-		padding: 40px 30px;
+.banner__wrap {
+	.form__block {
+		flex: 1 0 auto;
+		background-color: #fff;
+		border-radius: 10px;
+		transition: all 0.3s ease-in-out;
 		box-shadow: 0 0px 20px rgba(53, 51, 47, 0.3);
-		.modal__title {
-			display: flex;
-			flex-direction: column;
-			@include bp-1024 {
-				flex-direction: row;
-				justify-content: center;
-			}
-			@include bp-480 {
-				flex-direction: column;
-			}
-			p {
-				margin-bottom: 0;
-				font-weight: 700;
-				@include bp-1024 {
-					margin-right: 5px;
-				}
-			}
-			span {
-				color: $main-color;
-				font-weight: 700;
-				margin-bottom: 0;
-			}
-		}
-		.modal__form {
 
-			.inputs {
+		opacity: 0;
+		&._active {
+			opacity: 1;
+			transition: all 0.3s ease 0s;
+		}
+		.modal__container {
+			width: 335px ;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 40px 30px;
+			@include bp-1024 {
+				width: 100%;
+				padding: 25px 20px;
+
+			}
+			.modal__title {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 30px;
+				text-align: center;
 				@include bp-1024 {
 					flex-direction: row;
+					justify-content: center;
+					margin-bottom: 15px;
 				}
-				@include bp-820 {
+				@include bp-480 {
 					flex-direction: column;
 				}
-				.form-btn {
+				p {
+					margin-bottom: 0;
+					font-weight: 700;
 					@include bp-1024 {
-						margin-top:5px;
-						margin-bottom: 5px;
-					}
-					button {
-						width: 100%;
+						margin-right: 5px;
 					}
 				}
+				span {
+					color: $main-color;
+					font-weight: 700;
+					margin-bottom: 0;
+				}
+			}
+			.modal__form {
+
+				.inputs {
+					@include bp-1024 {
+						flex-direction: row;
+					}
+					@include bp-820 {
+						flex-direction: column;
+					}
+					.input-container {
+						.input-box {
+							margin-bottom: 10px;
+						}
+					}
+					.form-btn {
+						@include bp-1024 {
+							margin-top:5px;
+							margin-bottom: 5px;
+						}
+						button {
+							width: 100%;
+						}
+					}
+				}
+				.checkbox {
+					margin: 25px 0 5px 0;
+					@include bp-1024 {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+					}
+					@include bp-640 {
+						flex-direction: column;
+					}
+					.label-text {
+						width: auto;
+						white-space: nowrap;
+						@include bp-1024 {
+							&:before {
+								top: 0;
+							}
+						}
+						@include bp-640 {
+							&:before {
+								top: 8px;
+							}
+						}
+					}
+					.btn-politics {
+						display: inline-block;
+						text-align: left;
+						margin-left: 30px;
+						cursor: pointer;
+						font-size: 11px;
+						color: $title;
+						@include bp-1024 {
+							margin-left: 10px;
+						}
+						@include bp-640 {
+							margin-left: 30px;
+						}
+					}
+				}
+	
 			}
 
 		}
-
-		@include bp-1024 {
-			width: 100%;
-		}
-		@include bp-480 {
-			padding: 25px 20px;
-		}
 	}
+	
 }
 
 
